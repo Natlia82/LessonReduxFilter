@@ -5,11 +5,11 @@ import {serviceFilter} from '../redux/actionCreators';
 
 function ServiceFilter() {
     const item = useSelector(state => state.serviceFilter);
-    console.log(item);
+   // console.log(item);
     const dispatch = useDispatch();
     
     const ChangeFilter = evt => { const {value} = evt.target; 
-                                  console.log(value);
+                                  //console.log(value);
                                   dispatch(serviceFilter(value));    
                                 }
   
