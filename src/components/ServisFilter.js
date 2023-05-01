@@ -16,7 +16,7 @@ function ServiceFilter() {
     return (
             <form className='fiiler'>
                 <label>Фильтер: </label> <input name='filter' onChange={ChangeFilter} value={item.filter} />
-                <p>{item.filter}</p>
+                
             </form>
    
     );

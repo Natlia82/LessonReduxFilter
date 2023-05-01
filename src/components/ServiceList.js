@@ -5,9 +5,9 @@ import {removeService, removeEdit} from '../redux/actionCreators';
 function ServiceList() {
     const items = useSelector(state => state.serviceList);
     const filter = useSelector(state => state.serviceFilter);
-   // console.log(filter);
-    const newItems = items.filter(item => item.name.indexOf(filter.filter) !== -1);
-   // console.log(newItems);
+    console.log(filter);
+    const newItems = items.filter(item => item.name.toUpperCase().indexOf(filter.filter.toUpperCase()) !== -1);
+    console.log(newItems);
     const dispatch = useDispatch();
     const handleRemove = id => {dispatch(removeService(id)) };
     const handleEdit = (id, nazv, price) => {dispatch(removeEdit(id, nazv, price)) };

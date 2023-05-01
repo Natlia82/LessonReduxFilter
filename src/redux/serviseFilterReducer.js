@@ -1,5 +1,5 @@
 import { FILTER_SERVICE } from './actionTypes'
-const initialState = { filter: '0' };
+const initialState = { filter: '' };
 
 export default function serviceFilterReducer(state = initialState, action) {
     switch (action.type) {
