@@ -1,5 +1,5 @@
 import { func } from 'prop-types';
-import { ADD_SERVICE, REMOVE_SERVICE, CHANGE_SERVICE_FIELD, EDIT_SERVICE_FIELD, CANCEL_SERVICE_FIELD, UPDATE_SERVICE } from './actionTypes';
+import { ADD_SERVICE, REMOVE_SERVICE, CHANGE_SERVICE_FIELD, EDIT_SERVICE_FIELD, CANCEL_SERVICE_FIELD, UPDATE_SERVICE, FILTER_SERVICE } from './actionTypes';
 
 export function addService(name, price) {
     return { type: ADD_SERVICE, payload: { name, price } };
@@ -22,4 +22,8 @@ export function changeServiceCansel() {
 
 export function updateService(kod, nameNew, priceNew) {
     return { type: UPDATE_SERVICE, payload: { kod, nameNew, priceNew } }
+}
+
+export function serviceFilter(value) {
+    return { type: FILTER_SERVICE, payload: { value } }
 }
